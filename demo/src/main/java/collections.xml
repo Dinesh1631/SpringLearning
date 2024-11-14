@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="sim" class="SpringIOC.Idea"></bean>
+    <bean id="student" class="loading.collections.student">
+    <property name="name" value="Dinesh"></property>
+    <property name="Address">
+      <list>
+      <value>Hyderabad</value>
+      <value>Delhi</value>
+      </list> 
+    </property>
+    <property name="Phones">
+    <set>
+    <value>Apple</value>
+    <value>Android</value>
+    </set>
+    </property>
+    
+    <property name="courses">
+    <map>
+    <entry key="Java" value="3"/>
+    <entry key="Python" value="2"/>
+    </map>
+    </property>
+    </bean>
+</beans>

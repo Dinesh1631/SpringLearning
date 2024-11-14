@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+   "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+   "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">  
+
+<hibernate-configuration>  
+   <session-factory>
+  	<!--This is about basic hibernate configuration-->
+     <property name="hibernate.show_sql">true</property>  
+      <property name="hibernate.format_sql">true</property> 
+      <property name="hibernate.hbm2ddl.auto">update</property>
+      <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>  
+      
+      <!--Data for second level caching-->
+      <property name="Cache"></property>
+      
+      <!--This is about about DB configuration-->
+      <property name="connection.url">jdbc:mysql://localhost/dineshdb</property>  
+      <property name="connection.username">root</property>  
+      <property name="connection.password">Dinesh@123</property>  
+      <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>  
+      
+      <!--This is about the mapping the classes-->
+
+	<!--	<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property> -->
+     
+     
+     <!--These is mapping the objects-->
+     <mapping class="cascading_and_cacheing.student"/>
+     <mapping class="Hibernate_Creteria.vechile"/>
+   
+     <mapping resource="person.hbm.xml"/>
+     
+     
+   </session-factory>  
+</hibernate-configuration>
