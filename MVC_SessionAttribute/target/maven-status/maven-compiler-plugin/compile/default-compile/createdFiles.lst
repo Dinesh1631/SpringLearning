@@ -1,0 +1,4 @@
+com\SessionAttribute\Configuration\dispatcherServletConfig.class
+com\SessionAttribute\Controllers\secondController.class
+com\SessionAttribute\Controllers\gateWayController.class
+com\SessionAttribute\Configuration\webAppConfig.class

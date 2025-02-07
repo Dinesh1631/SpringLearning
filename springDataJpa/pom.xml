@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>SpringDataJPA</groupId>
+    <artifactId>springDataJpa</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springDataJpa</name>
+    <url>http://www.example.com</url>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>  <!-- JDK 21 compatibility -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Jakarta Persistence Dependency (JPA) -->
+            <dependency>
+                <groupId>jakarta.persistence</groupId>
+                <artifactId>jakarta.persistence-api</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+
+            <!-- Hibernate ORM Dependency (JPA Provider) -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>6.2.6.Final</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- JUnit 5 Dependency for testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.11.0</version>  <!-- JUnit version specified -->
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Optionally: parameterized tests support -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.11.0</version>  <!-- JUnit version specified -->
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Maven Compiler Plugin for JDK 21 compatibility -->
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <source>21</source>
+                        <target>21</target>
+                    </configuration>
+                </plugin>
+
+                <!-- Other standard plugins as needed -->
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.4.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.3.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
